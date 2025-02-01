@@ -1,66 +1,455 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-body{
-    width: 100%;
-    min-height: 100vh;
+@font-face {
+    font-family: Ultra;
+    src: url(fonts/Ultra/Ultra-Regular.ttf);
+  }
+  @font-face {
+    font-family: Oswald;
+    src: url(fonts/Oswald/Oswald-VariableFont_wght.ttf);
+  }
+  @font-face {
+    font-family: DM Sans;
+    src: url(fonts/DM_Sans/DMSans-VariableFont_opszwght.ttf);
+  }
+  body {
     display: flex;
-}
-
-.container{
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 200%;
-    background-color: #F5D3AB;
-}
-.firstbaked{
-    width: 20%;
-    height: 20%;
-    margin: 4%;
-    padding-left: 5%;
-}
-.container1{
-    width: 1110px;
-    height: 572px;
-    margin: 9%;
-    padding-bottom: 10%;
+    height: 100vh;
+    background: rgba(245, 211, 171, 1);
+    text-align: center;
+    color: white;
+  }
+  
+  .book {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .book1 {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+  }
+  .book1-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 200px;
+  }
+  .coconut1 > p {
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 0;
+    color: black;
+  }
+  .coconut2 > p {
+    font-family: Ultra;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 65%;
+    text-align: left;
+    margin: 0px 0px 50px 0px;
+    color: black;
+  }
+  .products {
+    width: 100%;
     display: grid;
-    grid-template-areas: 
-    "div1 div1 div2 "
-    "div3 div4 div5 ";
-    gap:30px;
-}
-.child1{
-    grid-area: div1;
-    background-color: #9B9B9B;
-    width: 700px;
-    height: 420px;
-
-
-}
-.child2{
-    grid-area:div2;
-    background-color: #BBBBBB;
-    width: 330px;
-    height: 420px;
-
-
-}
-.child3{
-    grid-area:div3;
-    background-color: #9B9B9B;
-    width: 330px;
-    height: 420px;
-}
-.child4{
-    grid-area:div4;
-    background-color: #9B9B9B;
-    width: 330px;
-    height: 420px;
-}
-.child5{
-    grid-area:div5;
-    background-color: #9B9B9B;
-    width: 330px;
-    height: 420px;
-}
+    gap: 20px;
+    grid-template-areas:
+      "P1 P1 P2"
+      "P3 P4 P5";
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  .product1,
+  .product2,
+  .product3,
+  .product4,
+  .product5 {
+    background: rgba(155, 155, 155, 1);
+    display: flex;
+    flex-direction: column;
+  
+    text-align: left;
+  }
+  .product1 {
+    align-items: center;
+    grid-area: P1;
+    display: flex;
+    color: white;
+    padding-top: 200px;
+  }
+  
+  .product1-1,
+  .product1-3 {
+    width: 80%;
+    display: flex;
+    align-items: center;
+  }
+  .product1-1 {
+    font-family: Ultra;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .product1-1 > p {
+    width: 50%;
+    margin: 0;
+  }
+  .product1-2 {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  
+  .price {
+    font-family: Ultra;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .product1-3 {
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .product1-2 > p {
+    width: 40%;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .product2 {
+    grid-area: P2;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .product2-1 {
+    width: 100%;
+    height: 30%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+  .product2-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    font-family: Oswald;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: black;
+  }
+  .product2-2 > .product1-3 {
+    width: 80%;
+  }
+  .product3 {
+    grid-area: P3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .product4 {
+    grid-area: P4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .product5 {
+    grid-area: P5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .explore-btn1,
+  .explore-btn2 {
+    background: transparent;
+    width: 15%;
+    padding: 10px 0px;
+    margin: 20px;
+    cursor: pointer;
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.71px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .explore-btn1 {
+    border: 2px solid rgba(23, 27, 27, 0.24);
+    color: black;
+  }
+  .explore-btn2 {
+    color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  .coconut4 > p {
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-top: 100px;
+  }
+  .coconut3 > p {
+    font-family: Ultra;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 0;
+    margin-bottom: 100px;
+  }
+  .process {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .steps {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    width: 286px;
+    height: 384px;
+    color: black;
+    position: relative;
+  }
+  .step1 {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .Comment1 {
+    font-family: Ultra;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 0;
+  }
+  .Comment2 {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 80%;
+    margin: 0;
+    color: rgba(51, 51, 51, 0.5);
+  }
+  .num {
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .step:hover {
+    transform: scale(1.05);
+  }
+  
+  .step:focus {
+    background: rgba(158, 173, 141, 1);
+    z-index: 1;
+    transform: scale(1.1);
+    padding: 20px;
+  }
+  .circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #ffcc00;
+    border-radius: 40% 0 40% 40%;
+    top: 0px;
+    right: 0px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .step:focus .circle {
+    opacity: 1;
+  }
+  
+  .active {
+    background: #99a88f;
+  }
+  
+  .recipes {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+  }
+  
+  .recipe-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+      "R1 R2 R3"
+      "R1 R4 R5";
+    grid-template-rows: minmax(200px, auto) minmax(200px, auto);
+    grid-template-columns: 2fr 1fr 1fr;
+    height: 600px;
+  }
+  
+  .recipe {
+    background: rgba(155, 155, 155, 1);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .recipe-1 {
+    color: black;
+    background-color: white;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .recipe-2 {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .recipe-2 > div > p {
+    margin: 0;
+  }
+  .recipe-3 > p {
+    font-family: DM Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 0;
+    width: 70%;
+  }
+  .time {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  .recipe1 {
+    grid-area: R1;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .recipe2 {
+    width: 100%;
+    height: 100%;
+  }
+  .recipe3 {
+    width: 100%;
+    height: 100%;
+  }
+  .recipe4 {
+    width: 100%;
+    height: 100%;
+  }
+  .recipe5 {
+    width: 100%;
+    height: 100%;
+  }
+  .recipetext1 {
+    width: 95%;
+    font-family: Ultra;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .recipetext1 > p {
+    margin: 0;
+  }
+  .recipetext2 {
+    width: 95%;
+    text-align: left;
+    margin: 0;
+  }
