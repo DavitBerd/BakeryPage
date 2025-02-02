@@ -1,134 +1,152 @@
-body {
+@font-face {
+    font-family: Ultra;
+    src: url(fonts/Ultra/Ultra-Regular.ttf);
+  }
+  @font-face {
+    font-family: DM Sans;
+    src: url(fonts/DM_Sans/DMSans-VariableFont_opszwght.ttf);
+  }
+  @font-face {
+    font-family: Oswald;
+    src: url(fonts/Oswald/Oswald-VariableFont_wght.ttf);
+  }
+  * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+  }
+  
+  body {
+    width: 100%;
+    height: 100vh;
     font-family: Arial, sans-serif;
-    background: #F5D3AB;
-    position: relative;
-}
-
-.container {
-    position: relative;
+    background: #f5d3ab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
     width: 100%;
     max-width: 1440px;
-    margin: 0 auto;
     padding: 40px;
-}
-
-.our-baker {
-    position: absolute;
-    top: 6921px;
-    left: 135px;
-    font-family: 'Oswald', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left-content {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .right-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .our-baker {
+    font-family: Oswald;
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 3px;
-    color: #171B1B;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
     text-transform: uppercase;
-}
-
-.main-heading {
-    position: absolute;
-    top: 6971px;
-    left: 135px;
-    font-family: 'Ultra', serif;
+  }
+  
+  .main-heading {
+    width: 90%;
+    font-family: Ultra;
     font-size: 56px;
     font-weight: 700;
     line-height: 64px;
-    color: #171B1B;
-}
-
-.white-box {
-    position: absolute;
-    top: 6896px;
-    left: 835px;
-    width: 470px;
-    height: 624px;
-    background: #FFFFFF;
-}
-
-.green-circle {
-    position: absolute;
-    top: 7390.35px;
-    left: 1418.71px;
-    width: 512px;
-    height: 519px;
-    background: #9EAD8D;
-    border-radius: 50%;
-    transform: rotate(-151deg);
-}
-
-.dots {
-    position: absolute;
-    top: 7047px;
-    left: 805.13px;
-    width: 154px;
-    height: 134px;
-    background: #171B1B;
-    transform: rotate(-40deg);
-}
-
-.baker-label {
-    position: absolute;
-    top: 7225px;
-    left: 235px;
-    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  
+  .baker-label {
+    font-family: "Oswald", sans-serif;
     font-size: 16px;
-    font-weight: 400;
     line-height: 32px;
     letter-spacing: 3px;
-    color: #171B1B;
+    color: #171b1b;
     text-transform: uppercase;
-}
-
-.baker-name {
-    position: absolute;
-    top: 7269px;
-    left: 235px;
-    font-family: 'Oswald', sans-serif;
+    margin-bottom: 5px;
+  }
+  
+  .baker-name {
+    font-family: Oswald;
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
-    color: #171B1B;
-}
-
-.description {
-    position: absolute;
-    top: 7323px;
-    left: 235px;
-    width: 370px;
-    font-family: 'DM Sans', sans-serif;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  
+  .description {
+    font-family: DM Sans;
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
     color: rgba(51, 51, 51, 0.5);
-}
-
-.arrows {
-    position: absolute;
-    top: 7280px;
-    left: 135px;
+  }
+  
+  .other-bakers p {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  
+  .arrows {
     width: 48px;
-    height: 104px;
-    background: #F5D3AB;
+    height: 90px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.arrow {
-    width: 24px;
-    height: 24px;
-    border: solid #171B1B;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-}
-
-.arrow-up {
+  }
+  .arrows:hover {
+    cursor: pointer;
+  }
+  .arrow-up {
     transform: rotate(-135deg);
-}
-
-.arrow-down {
+  }
+  
+  .arrow-down {
     transform: rotate(45deg);
-}
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .info-1{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+  }
+  .baker-details{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
