@@ -10,6 +10,7 @@
     font-family: Oswald;
     src: url(fonts/Oswald/Oswald-VariableFont_wght.ttf);
   }
+  
   * {
     box-sizing: border-box;
     margin: 0;
@@ -18,18 +19,29 @@
   
   body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     font-family: Arial, sans-serif;
     background: #f5d3ab;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 200px;
+  }
+  
+  .union {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 200px;
   }
   
   .container {
-    width: 100%;
+    width: 90%;
     max-width: 1440px;
-    padding: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -58,8 +70,6 @@
     line-height: 32px;
     letter-spacing: 3px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     text-transform: uppercase;
   }
   
@@ -70,8 +80,6 @@
     font-weight: 700;
     line-height: 64px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
   }
   
   .baker-label {
@@ -90,18 +98,15 @@
     font-weight: 400;
     line-height: 32px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
   }
   
   .description {
+    width: 60%;
     font-family: DM Sans;
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: rgba(51, 51, 51, 0.5);
   }
   
@@ -111,8 +116,6 @@
     font-weight: 400;
     line-height: 32px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
   }
   
   .arrows {
@@ -120,9 +123,11 @@
     height: 90px;
     display: flex;
   }
+  
   .arrows:hover {
     cursor: pointer;
   }
+  
   .arrow-up {
     transform: rotate(-135deg);
   }
@@ -135,18 +140,380 @@
     max-width: 100%;
     height: auto;
   }
+  .shr {
+    max-width: 100%;
+    height: auto;
+  }
   .info {
     display: flex;
     align-items: center;
     gap: 20px;
   }
-  .info-1{
-      display: flex;
+  
+  .info-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .baker-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .container1 {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .ST {
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .S {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ST1 {
+    font-family: Ultra;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: center;
+    width: 60%;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .SC {
+    background-color: white;
+    width: 100%;
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    word-wrap: break-word;
+  }
+  
+  .SC:hover {
+    transform: scale(1.1);
+  }
+  
+  .active {
+    background-color: rgba(158, 173, 141, 1);
+  }
+  
+  .SC1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .SCT1 {
+    font-family: Oswald;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+  }
+  
+  .SCT2 {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: rgba(51, 51, 51, 0.5);
+  }
+  
+  .info2 {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+  
+  .info2-1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .info2-3 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .T3 {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    color: rgba(51, 51, 51, 0.5);
+    width: 60%;
+  }
+  
+  .ic {
+    display: grid;
+    place-content: center;
+    background-color: black;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+  }
+  
+  .T {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .T1 {
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
+  .T2 {
+    font-family: Oswald;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+  
+  .T4 {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+  
+  .buttondiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button {
+    width: 170px;
+    height: 48px;
+    background-color: transparent;
+    border: 1px solid rgba(23, 27, 27, 0.24);
+    cursor: pointer;
+  }
+  
+  footer {
+    height: 432px;
+    width: 100%;
+    background-image: url(imgs/Shape\(5\).png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+    width: 80%;
+    color: white;
+  }
+  
+  .foot1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .foottext {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .foottext1 {
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
+  .foottext2 {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    cursor: pointer;
+  }
+  
+  .footimgs {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footimg {
+    background: rgba(245, 174, 92, 1);
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+  }
+  
+  .foot2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .terms {
+    display: flex;
+    gap: 100px;
+  }
+  
+  hr {
+    opacity: 0.2;
+  }
+  
+  @media (max-width: 992px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    .container1 {
+      width: 95%;
+    }
+    .ST1 {
+      width: 90%;
+      font-size: 36px;
+    }
+    .baker-label {
+      text-align: left;
+    }
+    .left-content,
+    .right-content {
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .main-heading {
+      width: 100%;
+      font-size: 48px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-heading {
+      font-size: 40px;
+    }
+  
+    .our-baker {
+      font-size: 14px;
+    }
+  
+    .baker-label,
+    .baker-name,
+    .description {
+      font-size: 14px;
+    }
+  
+    .container1 {
+      width: 100%;
+    }
+  
+    .swiper {
+      width: 50%;
+      height: 400px;
+    }
+  
+    .ST1 {
+      font-size: 36px;
+      width: 80%;
+    }
+    .SCT1 {
+      font-size: 20px;
+    }
+    .SCT2,
+    .T3 {
+      font-size: 14px;
+      line-height: 1.5;
+      width: 100% !important;
+    }
+    .info2-1 {
       flex-direction: column;
       gap: 30px;
+    }
+    .T {
+      text-align: left;
+    }
   }
-  .baker-details{
-      display: flex;
+  
+  @media (max-width: 480px) {
+    .main-heading {
+      font-size: 32px;
+      width: 100%;
+    }
+    .info2-1 {
       flex-direction: column;
-      gap: 10px;
+    }
+    .ST1 {
+      font-size: 28px;
+      width: 100%;
+    }
+  
+    .button {
+      width: 140px;
+      height: 40px;
+    }
+    footer {
+      height: auto;
+    }
+    .foot1 {
+      padding: 50px 0px;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .terms {
+      gap: 20px;
+    }
   }
