@@ -371,6 +371,14 @@ body {
   background: #99a88f;
 }
 
+.explore-btn1:hover{
+  background-color: black;
+  color: white;
+}
+.explore-btn2:hover{
+  background-color: #F5D3AB;
+  color: black;
+}
 .recipes {
   width: 75%;
   display: flex;
