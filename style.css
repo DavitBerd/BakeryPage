@@ -1,0 +1,445 @@
+@font-face {
+  font-family: Ultra;
+  src: url(fonts/Ultra/Ultra-Regular.ttf);
+}
+@font-face {
+  font-family: Oswald;
+  src: url(fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: DM Sans;
+  src: url(fonts/DM_Sans/DMSans-VariableFont_opszwght.ttf);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(245, 211, 171, 1);
+  text-align: center;
+  color: white;
+  gap: 200px;
+}
+
+div > img {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 100px;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(23, 27, 27, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header1 {
+  height: 90%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.header2 {
+  height: 90%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 70px;
+}
+.head1 {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.headtexts {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: right;
+}
+.headtexts > p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.btn {
+  width: 138px;
+  height: 48px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.titleinfo {
+  text-align: left;
+}
+.year {
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-align: left;
+}
+.title {
+  font-family: Ultra;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 80px;
+  text-align: left;
+  margin: 0;
+}
+.des {
+  width: 80%;
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+}
+.down {
+  position: absolute;
+  bottom: 20px;
+}
+.div1 {
+  display: flex;
+  justify-content: center;
+  color: black;
+  width: 80%;
+  gap: 50px;
+}
+.div1_1 {
+  display: flex;
+  flex-direction: column;
+}
+.div1_2 {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+.text1 {
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-align: left;
+}
+.text2 {
+  margin-top: 0;
+  font-family: Ultra;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: left;
+}
+.smth {
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-align: left;
+}
+.view {
+  font-family: Oswald;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+}
+.pack {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  color: rgba(51, 51, 51, 0.5);
+}
+.text3 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.text4 {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+}
+.div2 {
+  width: 80%;
+}
+.texts1 {
+  color: black;
+}
+.text5 {
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.slides {
+  width: 100%;
+}
+.swiper {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slidecard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 100px;
+  background-color: white;
+  height: 350px;
+  padding: 50px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 0;
+}
+.active {
+  background: rgba(158, 173, 141, 1);
+  transform: scale(1.05);
+  z-index: 1;
+}
+.slideText1 {
+  font-family: Ultra;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: left;
+  color: black;
+  margin: 0;
+}
+.slideText2 {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  color: rgba(51, 51, 51, 0.5);
+}
+.abs {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.abs > img {
+  width: 100%;
+  height: 100%;
+}
+.null {
+  display: none;
+}
+.div3 {
+  height: 480px;
+  width: 100%;
+  background-image: url(imgs/Bitmap\(1\).png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div3_1 {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  gap: 300px;
+}
+.text6 {
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-align: left;
+}
+.text7 {
+  font-family: Ultra;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: left;
+}
+.texts2 {
+  width: 60%;
+}
+.text8 {
+  margin-top: 0;
+  font-family: Ultra;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: center;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .abs {
+    width: 50%;
+    width: 50%;
+  }
+  .header1,
+  .header2 {
+    width: 50%;
+  }
+  .main {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .btn {
+    display: none;
+  }
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 0;
+  }
+  .header1,
+  .header2 {
+    width: 90%;
+    align-items: center;
+  }
+  .head1 {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .menu {
+    display: block;
+  }
+  .headtexts {
+    display: none;
+  }
+  .titleinfo {
+    text-align: center;
+  }
+  .div1 {
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+  }
+  .div1_2 {
+    gap: 20px;
+    align-items: center;
+  }
+  .div3 {
+    height: auto;
+  }
+  .div3_1 {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .texts1 > p {
+    text-align: left;
+  }
+  .texts2 {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .abs {
+    width: 30%;
+    height: 50%;
+  }
+  .title {
+    font-size: 48px;
+  }
+  .des {
+    font-size: 16px;
+  }
+  .text2 {
+    font-size: 40px;
+  }
+  .slidecard {
+    padding: 30px;
+    gap: 50px;
+    height: auto;
+  }
+  .swiper {
+    height: 400px;
+  }
+  .texts2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .abs > img {
+    height: 50%;
+  }
+  .headtexts > p {
+    font-size: 14px;
+  }
+  .year,
+  .text1,
+  .text5,
+  .text6 {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 36px;
+  }
+  .text2,
+  .text7,
+  .text8 {
+    font-size: 40px;
+  }
+  .btn {
+    width: 120px;
+    height: 40px;
+  }
+  .div3_1 {
+    width: 95%;
+    gap: 20px;
+  }
+}
