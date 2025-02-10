@@ -1,3 +1,4 @@
+/*DATO*/ 
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
@@ -20,3 +21,8 @@ document.querySelectorAll('.slidecard').forEach(card => {
         card.querySelector('.abs').classList.remove('null');
     });
 });
+/*DATO*/ 
+/*ANRI*/ 
+/*ANRI*/ 
+/*DACHI*/ 
+/*DACHI*/ 

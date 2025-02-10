@@ -1,3 +1,4 @@
+/* DATO */
 @font-face {
   font-family: Ultra;
   src: url(fonts/Ultra/Ultra-Regular.ttf);
@@ -322,7 +323,13 @@ header {
 .menu {
   cursor: pointer;
 }
+/* DATO */
+/* ANRI */
+/* ANRI */
+/* DACHI */
+/* DACHI */
 @media (max-width: 1200px) {
+  /* DATO */
   .abs {
     width: 50%;
     width: 50%;
@@ -334,9 +341,17 @@ header {
   .main {
     gap: 50px;
   }
+  /* DATO */
+  /* ANRI */
+  /* ANRI */
+  /* DACHI */
+  /* DACHI */
 }
-
 @media (max-width: 992px) {
+  /* DATO */
+  .slideText2 {
+    font-size: 15px;
+  }
   .show {
     width: 100%;
     justify-content: space-between;
@@ -391,9 +406,17 @@ header {
   .texts2 {
     width: 80%;
   }
+  /* DATO */
+  /* ANRI */
+  /* ANRI */
+  /* DACHI */
+  /* DACHI */
 }
-
 @media (max-width: 768px) {
+  /* DATO */
+  .slideText2 {
+    font-size: 16px;
+  }
   .abs {
     width: 30%;
     height: 50%;
@@ -418,9 +441,14 @@ header {
   .texts2 {
     width: 100%;
   }
+  /* DATO */
+  /* ANRI */
+  /* ANRI */
+  /* DACHI */
+  /* DACHI */
 }
-
 @media (max-width: 480px) {
+  /* DATO */
   .abs > img {
     height: 50%;
   }
@@ -449,4 +477,9 @@ header {
     width: 95%;
     gap: 20px;
   }
+  /* DATO */
+  /* ANRI */
+  /* ANRI */
+  /* DACHI */
+  /* DACHI */
 }
