@@ -26,8 +26,7 @@ body {
   color: white;
   gap: 200px;
 }
-
-div > img {
+.img1 > img {
   width: 100%;
   height: 100%;
 }
@@ -61,6 +60,7 @@ header {
   flex-direction: column;
   align-items: flex-end;
   gap: 70px;
+  position: relative;
 }
 .head1 {
   display: flex;
@@ -81,7 +81,42 @@ header {
   cursor: pointer;
   text-decoration: underline;
 }
-.btn {
+.menuNull {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  width: 150px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: white;
+  color: black;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.3s ease;
+  visibility: hidden;
+}
+.btn_2 {
+  background-color: transparent;
+  border: none;
+}
+.menuNull > p:hover {
+  text-decoration: underline;
+}
+.menuNull.invis {
+  opacity: 0;
+  transform: translateY(100%);
+  visibility: hidden;
+}
+
+.menuNull:not(.invis) {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+.btn1 {
   width: 138px;
   height: 48px;
   background-color: transparent;
@@ -89,6 +124,10 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 2px;
   cursor: pointer;
+}
+.btn1:hover {
+  background-color: rgb(215, 215, 215);
+  color: black;
 }
 .titleinfo {
   text-align: left;
@@ -215,14 +254,8 @@ header {
   width: 100%;
 }
 .swiper {
-  width: 100%;
+  width: 100% !important;
   height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
-.swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -238,12 +271,15 @@ header {
   position: relative;
   transition: all 0.3s ease;
   cursor: pointer;
-  z-index: 0;
 }
-.active {
+.slidecard:hover {
+  transition: (1.1);
+}
+.active1 {
   background: rgba(158, 173, 141, 1);
-  transform: scale(1.05);
+  transform: scale(1.1);
   z-index: 1;
+  transition: 500ms;
 }
 .slideText1 {
   font-family: Ultra;
@@ -336,7 +372,7 @@ header {
 }
 .book1 {
   width: 100%;
-  background-image: url(imgs/Shape\(2\).png);
+  background-image: url(images/Shape\(2\).png);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -350,6 +386,7 @@ header {
   gap: 200px;
 }
 .coconut1 > p {
+  color: black;
   font-family: Oswald;
   font-size: 16px;
   font-weight: 400;
@@ -359,9 +396,9 @@ header {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   margin: 0;
-  color: black;
 }
 .coconut2 > p {
+  color: black;
   font-family: Ultra;
   font-size: 56px;
   font-weight: 700;
@@ -370,8 +407,8 @@ header {
   text-decoration-skip-ink: none;
   width: 65%;
   text-align: left;
+  word-wrap: break-word;
   margin: 0px 0px 50px 0px;
-  color: black;
 }
 .products {
   width: 100%;
@@ -591,6 +628,7 @@ header {
   justify-content: center;
 }
 .swiper-container {
+  overflow: hidden;
   width: 100%;
   height: 450px;
 }
@@ -622,7 +660,6 @@ header {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  margin: 0;
 }
 .Comment2 {
   font-family: DM Sans;
@@ -665,6 +702,7 @@ header {
   background: rgba(158, 173, 141, 1);
   z-index: 1;
   padding: 20px;
+  transition: 5s;
 }
 
 .explore-btn1:hover {
@@ -672,7 +710,7 @@ header {
   color: white;
 }
 .explore-btn2:hover {
-  background-color: #f5d3ab;
+  background-color: #b2b2b2;
   color: black;
 }
 .recipes {
@@ -680,7 +718,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
 }
 
 .recipe-grid {
@@ -852,8 +889,11 @@ header {
   letter-spacing: 3px;
   text-align: left;
   text-transform: uppercase;
+  color: black;
 }
-
+.main-heading > p {
+  margin: 0;
+}
 .main-heading {
   width: 90%;
   font-family: Ultra;
@@ -861,9 +901,11 @@ header {
   font-weight: 700;
   line-height: 64px;
   text-align: left;
+  color: black;
 }
 
 .baker-label {
+  text-align: left;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 32px;
@@ -926,6 +968,7 @@ header {
   height: auto;
 }
 .info {
+  color: black;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -961,6 +1004,7 @@ header {
 }
 
 .S {
+  color: #171b1b;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -973,6 +1017,7 @@ header {
   line-height: 64px;
   text-align: center;
   width: 60%;
+  margin: 0;
 }
 
 .myswiper {
@@ -989,6 +1034,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex !important;
 }
 
 .SC {
@@ -1073,6 +1119,7 @@ header {
 }
 
 .T {
+  text-align: left;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1168,6 +1215,10 @@ footer {
   cursor: pointer;
 }
 
+.foottext2 > p:hover {
+  text-decoration: underline;
+}
+
 .footimgs {
   display: flex;
   gap: 20px;
@@ -1182,7 +1233,12 @@ footer {
   place-content: center;
   cursor: pointer;
 }
-
+.footimg:hover {
+  background: rgb(145, 145, 144);
+}
+.footimg:hover > img {
+  filter: invert(100%);
+}
 .foot2 {
   width: 100%;
   display: flex;
@@ -1229,6 +1285,9 @@ hr {
 }
 @media (max-width: 992px) {
   /* DATO */
+  .img1 {
+    width: 60%;
+  }
   .slideText2 {
     font-size: 15px;
   }
@@ -1237,7 +1296,7 @@ hr {
     justify-content: space-between;
     display: flex;
   }
-  .btn {
+  .btn1 {
     display: none;
   }
   header {
@@ -1265,6 +1324,7 @@ hr {
   }
   .div1 {
     flex-direction: column;
+    align-items: center;
     gap: 30px;
     width: 90%;
   }
@@ -1324,9 +1384,13 @@ hr {
   }
   .recipe-1 {
     height: 100%;
+    justify-content: flex-end;
   }
   /* ANRI */
   /* DACHI */
+  .SC {
+    width: 80%;
+  }
   .container {
     flex-direction: column;
     align-items: center;
@@ -1387,6 +1451,7 @@ hr {
   /* DATO */
   /* ANRI */
   .recipe-1 {
+    justify-content: center;
     height: 40%;
   }
   .book {
@@ -1543,6 +1608,9 @@ hr {
   .T {
     text-align: left;
   }
+  .SC {
+    width: 80%;
+  }
   /* DACHI */
 }
 @media (max-width: 576px) {
@@ -1606,6 +1674,9 @@ hr {
 }
 @media (max-width: 480px) {
   /* DATO */
+  .img1 {
+    width: 100%;
+  }
   .abs > img {
     height: 50%;
   }
@@ -1634,13 +1705,25 @@ hr {
     width: 95%;
     gap: 20px;
   }
+  .texts1 > p {
+    text-align: center;
+  }
   /* DATO */
   /* ANRI */
+  .book {
+    align-items: center;
+  }
+  .btn {
+    height: auto;
+  }
   .coconut1 p {
     font-size: 14px;
   }
   /* ANRI */
   /* DACHI */
+  .left-content {
+    gap: 10px;
+  }
   .main-heading {
     font-size: 32px;
     width: 100%;
@@ -1673,7 +1756,7 @@ hr {
     gap: 20px;
   }
   .foot2 {
-    padding: 20px;
+    padding: 20px 0px;
     gap: 20px;
     flex-direction: column;
   }

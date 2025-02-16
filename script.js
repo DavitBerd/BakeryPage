@@ -3,9 +3,8 @@ const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
-
     breakpoints: {
-        768: {
+        992: {
             slidesPerView: 3,
         },
     },
@@ -14,12 +13,23 @@ const swiper = new Swiper('.swiper', {
 document.querySelectorAll('.slidecard').forEach(card => {
     card.addEventListener('click', () => {
         document.querySelectorAll('.slidecard').forEach(c => {
-            c.classList.remove('active');
+            c.classList.remove('active1');
             c.querySelector('.abs').classList.add('null');
         });
-        card.classList.add('active');
+        card.classList.add('active1');
         card.querySelector('.abs').classList.remove('null');
     });
+});
+document.getElementById('menuBtn').addEventListener('click', () => {
+    if (window.innerWidth <= 998) {
+        document.getElementById('menu').classList.toggle('invis')
+    }
+
+})
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 998) {
+        menu.classList.add('invis');
+    }
 });
 /*DATO*/
 /*ANRI*/
@@ -28,7 +38,7 @@ const middleSwiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 1,
     breakpoints: {
-        768: {
+        992: {
             slidesPerView: 4,
         },
     },
@@ -50,20 +60,10 @@ const swiper2 = new Swiper('.myswiper', {
     loop: true,
     slidesPerView: 1,
     breakpoints: {
-        769: {
+        992: {
             slidesPerView: 3
         }
     },
-    pagination: {
-        el: '.swiper-pagination'
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    },
-    scrollbar: {
-        el: '.swiper-scrollbar'
-    }
 });
 
 document.querySelectorAll('.swiper-slide').forEach(slide => {
