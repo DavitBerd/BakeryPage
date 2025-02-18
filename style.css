@@ -42,19 +42,30 @@ header {
   height: 100vh;
   background-color: rgba(23, 27, 27, 1);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   position: relative;
 }
+.navdiv {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header {
+  justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
 .header1 {
-  height: 90%;
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 70px;
 }
 .header2 {
-  height: 90%;
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -68,6 +79,7 @@ header {
   align-items: center;
 }
 .headtexts {
+  gap: 40px;
   width: 60%;
   display: flex;
   justify-content: space-around;
@@ -77,11 +89,16 @@ header {
   line-height: 32px;
   text-align: right;
 }
-.headtexts > p:hover {
+ul {
+  list-style-type: none;
+}
+li > a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 .menuNull {
+  padding: 20px 0px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,8 +106,8 @@ header {
   width: 150px;
   height: auto;
   position: absolute;
-  right: 0;
-  top: 50px;
+  right: 7.5%;
+  top: 120px;
   background-color: white;
   color: black;
   opacity: 0;
@@ -98,11 +115,16 @@ header {
   transition: all 0.3s ease;
   visibility: hidden;
 }
-.btn_2 {
-  background-color: transparent;
-  border: none;
+a {
+  text-decoration: none;
 }
-.menuNull > p:hover {
+a:visited {
+  color: inherit;
+}
+ul > a {
+  text-align: center;
+}
+.menuNull > ul > a:hover {
   text-decoration: underline;
 }
 .menuNull.invis {
@@ -355,6 +377,7 @@ header {
   text-align: center;
 }
 .show {
+  align-items: center;
   display: none;
 }
 .menu {
@@ -1066,6 +1089,7 @@ header {
 }
 
 .SCT1 {
+  color: black;
   font-family: Oswald;
   font-size: 24px;
   font-weight: 400;
@@ -1285,6 +1309,10 @@ hr {
 }
 @media (max-width: 992px) {
   /* DATO */
+  .header {
+    gap: 20px;
+    justify-content: center;
+  }
   .img1 {
     width: 60%;
   }
@@ -1300,10 +1328,8 @@ hr {
     display: none;
   }
   header {
-    gap: 100px;
-  }
-  header {
-    flex-direction: column-reverse;
+    gap: 50px;
+    flex-direction: column;
     height: auto;
     padding: 80px 0;
   }
@@ -1447,6 +1473,9 @@ hr {
   }
   .texts2 {
     width: 100%;
+  }
+  .header {
+    flex-wrap: wrap-reverse;
   }
   /* DATO */
   /* ANRI */
@@ -1690,7 +1719,7 @@ hr {
     font-size: 14px;
   }
   .title {
-    font-size: 36px;
+    font-size: 32px;
   }
   .text2,
   .text7,
