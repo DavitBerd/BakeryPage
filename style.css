@@ -79,6 +79,7 @@ header {
   align-items: center;
 }
 .headtexts {
+  list-style-type: none;
   gap: 40px;
   width: 60%;
   display: flex;
@@ -89,13 +90,8 @@ header {
   line-height: 32px;
   text-align: right;
 }
-ul {
-  list-style-type: none;
-}
-li {
-  text-align: center;
-}
-li::after {
+
+.headtexts > ::after {
   content: "";
   display: block;
   width: 100%;
@@ -113,6 +109,7 @@ li > a:hover {
   cursor: pointer;
 }
 .menuNull {
+  list-style-type: none;
   padding: 20px 0px;
   gap: 20px;
   display: flex;
@@ -132,8 +129,19 @@ li > a:hover {
   visibility: hidden;
 }
 .menuNull > li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  background-color: gray;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
   height: 1px;
   background-color: black;
+}
+.menuNull > li:hover::after {
+  transform: scaleX(1);
 }
 a {
   text-decoration: none;
@@ -412,6 +420,7 @@ ul > a {
   flex-direction: column;
   align-items: center;
   align-items: flex-start;
+  gap: 50px;
 }
 .book1 {
   width: 100%;
@@ -426,7 +435,8 @@ ul > a {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 200px;
+  gap: 150px;
+  padding: 50px 0px;
 }
 .coconut1 > p {
   color: black;
@@ -615,8 +625,8 @@ ul > a {
 .explore-btn1,
 .explore-btn2 {
   background: transparent;
-  width: 15%;
-  padding: 10px 0px;
+  width: 100%;
+  padding: 10px 20px;
   margin: 20px;
   cursor: pointer;
   font-family: Oswald;
@@ -713,6 +723,7 @@ ul > a {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   width: 80%;
+  height: 130px;
   margin: 0;
   color: rgba(51, 51, 51, 0.5);
 }
@@ -887,6 +898,10 @@ ul > a {
 .recipe1 .time {
   margin-top: auto;
   padding-top: 15px;
+}
+.steptexts {
+  display: flex;
+  flex-direction: column;
 }
 /* ANRI */
 /* DACHI */
@@ -1413,10 +1428,6 @@ hr {
     grid-template-columns: 1fr 1fr;
     height: auto;
   }
-  .explore-btn1,
-  .explore-btn2 {
-    width: 25%;
-  }
   .product2,
   .product3,
   .product4,
@@ -1556,11 +1567,6 @@ hr {
   }
   .recipe {
     height: 300px;
-  }
-  .explore-btn1,
-  .explore-btn2 {
-    width: 50%;
-    padding: 15px 0;
   }
   .product2,
   .product3,
